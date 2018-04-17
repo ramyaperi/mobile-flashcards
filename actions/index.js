@@ -4,7 +4,7 @@ export const ADD_CARD = 'ADD_CARD'
 export const REMOVE_DECK = 'REMOVE_DECK'
 
 export function receiveDecks (decks) {
-    //console.log("recieve decks " + decks)
+  //console.log("recieve decks " + decks)
   return {
     type: RECEIVE_DECKS,
     decks,
