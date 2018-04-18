@@ -22,7 +22,7 @@ function FlashCardStatusBar({
       backgroundColor,
       height: Constants.statusBarHeight
     }}>
-    <StatusBar translucent="translucent" backgroundColor={backgroundColor} {...props}/>
+    <StatusBar translucent backgroundColor={backgroundColor} {...props}/>
   </View>)
 }
 

@@ -21,7 +21,7 @@ class DeckList extends Component {
   static navigationOptions = ({navigation}) => {
 
     return {
-      title: `Home`, headerRight: (<Button onPress={() => navigation.navigate('AddDeckScreen')} title="AddDeck" color="#fff"/>)
+      title: `Home`, headerRight: (<Button onPress={() => navigation.navigate('AddDeckScreen')} title="AddDeck"/>)
       /* the rest of this config is unchanged */
       /* {Array.from(this.props.deckList.keys())} */
     };
