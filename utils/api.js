@@ -14,15 +14,12 @@ export function getDecks() {
 }
 
 export function removeDeck(deckid) {
-  console.log(deckid);
   return(dispatch) => {
     AsyncStorage.getItem(FLASH_CARD_STORAGE_KEY).then(JSON.parse).then((data) => {
       data[deckid] = undefined
       delete data[deckid]
-      console.log(data);
       AsyncStorage.setItem(FLASH_CARD_STORAGE_KEY, JSON.stringify(data))
       dispatch(deleteDeck(deckid))
-      console.log("dispatch done")
     })
   }
 }

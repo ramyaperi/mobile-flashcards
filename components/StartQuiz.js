@@ -3,6 +3,8 @@ import {connect} from 'react-redux'
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import {getDecks} from '../utils/api'
 import {clearLocalNotification, setLocalNotification} from '../utils/helpers'
+import { Notifications, Permissions } from 'expo'
+
 class StartQuiz extends Component {
 
   state = {

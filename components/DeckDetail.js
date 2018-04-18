@@ -16,14 +16,12 @@ class DeckDetail extends Component {
 
   state = {
     opacity: new Animated.Value(0),
-    //width: new Animated.Value(0),
-    //height: new Animated.Value(0),
   }
 
   componentDidMount() {
     Animated.timing(this.state.opacity, {
       toValue: 1,
-      duration: 10000
+      duration: 1000
     }).start();
     this.props.fetchData();
     this.props.navigation.setParams({delete: this.props.delete});
@@ -57,7 +55,7 @@ class DeckDetail extends Component {
       }}>
       <Text style={styles.heading}>Deck Deatils</Text>
       <Text style={styles.heading}>{this.props.deckList[this.props.navigation.state.params.deckId].questions.length}
-        cards</Text>
+         cards</Text>
       {
         this.props.deckList[this.props.navigation.state.params.deckId].questions.length > 0 && <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('StartQuizScreen', {deckId: this.props.navigation.state.params.deckId})}>
             <Text style={styles.text}>Start Quiz</Text>

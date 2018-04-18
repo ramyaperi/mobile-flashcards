@@ -6,7 +6,6 @@ import {
 } from '../actions'
 
 function entries(state = {}, action) {
-  console.log(action.type)
   switch (action.type) {
     case RECEIVE_DECKS:
       return {
